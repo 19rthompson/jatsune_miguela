@@ -13,8 +13,6 @@ import os
 import pretty_midi
 
 
-SYL_BREAK = "this is the sylable break"
-
 def sanitize_user_input(string:str):
     output = ""
     for char in string:
@@ -206,14 +204,14 @@ def concatenate_syllable_dicts(syllables, crossfade_ms=10, output_filename="outp
         full_audio += syllable_audio
 
     # Export and clean up
-    full_audio.export(output_filename, format="wav")
+   
     for f in temp_files:
         os.remove(f)
-
+    return full_audio
     print(f"Synthesized audio saved as {output_filename}")
 
 
-    import pretty_midi
+    
 
 def get_melody_notes(midi_path):
     pm = pretty_midi.PrettyMIDI(midi_path)
