@@ -1,0 +1,9 @@
+PySimpleGUI
+pydub
+librosa
+pretty_midi
+epitran
+syltippy
+numpy
+scipy
+soundfile
